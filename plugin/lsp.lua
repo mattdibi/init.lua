@@ -44,6 +44,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set("n", "<leader>af", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n", "<leader>ar", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("n", "<leader>=", function() vim.lsp.buf.format() end, opts)
+
+    -- Clangd specific
+    vim.api.nvim_create_user_command('A', 'LspClangdSwitchSourceHeader', {})
+    vim.api.nvim_create_user_command('AV', 'vsplit | LspClangdSwitchSourceHeader', {})
+
     end
 })
 
