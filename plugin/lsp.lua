@@ -22,6 +22,10 @@ local config = {
 }
 vim.diagnostic.config(config)
 
+local opts = { noremap=true, silent=true }
+vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+
 -- Add LSP shortcut only when LSP attaches to the buffer
 local lspattachgroup = vim.api.nvim_create_augroup('lspattachgroup', {})
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -42,3 +46,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set("n", "<leader>=", function() vim.lsp.buf.format() end, opts)
     end
 })
+
+-- Servers
+vim.lsp.enable('clangd')
