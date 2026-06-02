@@ -48,3 +48,7 @@ vim.opt.splitbelow  = true   -- Puts new split windows to the bottom of the curr
 
 -- Markdown
 vim.g.markdown_fenced_languages = {'bash', 'python', 'sh', 'java', 'xml', 'groovy'}
+
+-- Completion menu
+vim.opt.pumheight = 15       -- Max completion menu height
+vim.opt.pumborder = 'single' -- Cool styling
