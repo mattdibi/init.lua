@@ -51,4 +51,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- Servers
-vim.lsp.enable('clangd')
+-- The configuration expects to find an env var 'INSTALLED_LSPS' which is
+-- a comma-separated list of strings containing the installed LSPs on the
+-- current machine. Given that this configuration is meant to be used with
+-- devcontainers, we don't know beforehand what we can find in the environment
+local installed_lsps = {}
+
+local env_var = os.getenv('INSTALLED_LSPS')
+if env_var ~= nil and env_var ~= '' then
+    installed_lsps = vim.split(env_var, ',')
+end
+
+for k,v in ipairs(installed_lsps) do
+    vim.lsp.enable(v)
+end
