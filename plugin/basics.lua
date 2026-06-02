@@ -3,7 +3,6 @@ vim.pack.add({
     "https://github.com/tpope/vim-vinegar",
     "https://github.com/tpope/vim-surround",
     "https://github.com/tpope/vim-repeat",
-    "https://github.com/tpope/vim-commentary",
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/challenger-deep-theme/vim",
 })
