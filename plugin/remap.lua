@@ -18,6 +18,12 @@ map('n', '<Down>',  ':resize -5<CR>', { noremap = true })
 map('n', '<Left>',  ':vertical resize -5<CR>', { noremap = true })
 map('n', '<Right>', ':vertical resize +5<CR>', { noremap = true })
 
+-- Smart way to move between windows
+map('', '<C-j>', '<C-W>j', {})
+map('', '<C-k>', '<C-W>k', {})
+map('', '<C-h>', '<C-W>h', {})
+map('', '<C-l>', '<C-W>l', {})
+
 -- Copy into system clipboard
 map('n', '<leader>y', '\"+y', { noremap = true })
 map('v', '<leader>y', '\"+y', { noremap = true })
