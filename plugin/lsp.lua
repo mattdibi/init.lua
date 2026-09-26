@@ -62,25 +62,27 @@ if env_var ~= nil and env_var ~= '' then
     installed_lsps = vim.split(env_var, ',')
 end
 
-for k,v in ipairs(installed_lsps) do
+-- Configs for specific LSPs
+if installed_lsps["jdtls"] ~= nil then
     -- References:
     -- https://micahsvenson.com/notes/brewing_up_a_java_setup_for_neovim/
     -- https://ptrtojoel.dev/posts/so-you-want-to-write-java-in-neovim/
     -- https://jqno.nl/post/2020/09/09/my-vim-setup/ and https://github.com/jqno/dotfiles/tree/main/nvim/.config/nvim
-    if v == "jdtls" then
-        vim.lsp.config("jdtls", {
-            settings = {
-                -- prevent .settings, .project, etc files from being generated in the project folder
-                cmd = {"jdtls", "--jvm-arg=-Djava.import.generatesMetadataFilesAtProjectRoot=false"},
-                java = {
-                    format = {
-                        enabled = true,
-                        comments = { enabled = false },
-                        tabSize = 4,
-                    },
+    vim.lsp.config("jdtls", {
+        settings = {
+            -- prevent .settings, .project, etc files from being generated in the project folder
+            cmd = {"jdtls", "--jvm-arg=-Djava.import.generatesMetadataFilesAtProjectRoot=false"},
+            java = {
+                format = {
+                    enabled = true,
+                    comments = { enabled = false },
+                    tabSize = 4,
                 },
             },
-        })
-    end
+        },
+    })
+end
+
+for _,v in ipairs(installed_lsps) do
     vim.lsp.enable(v)
 end
