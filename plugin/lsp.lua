@@ -70,6 +70,8 @@ for k,v in ipairs(installed_lsps) do
     if v == "jdtls" then
         vim.lsp.config("jdtls", {
             settings = {
+                -- prevent .settings, .project, etc files from being generated in the project folder
+                cmd = {"jdtls", "--jvm-arg=-Djava.import.generatesMetadataFilesAtProjectRoot=false"},
                 java = {
                     format = {
                         enabled = true,
