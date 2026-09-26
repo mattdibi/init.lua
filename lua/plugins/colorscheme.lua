@@ -3,6 +3,6 @@ return {
     name = "challenger-deep",
     priority = 1000,
     config = function()
-        vim.cmd("colorscheme challenger_deep")
+        vim.cmd.colorscheme("challenger_deep")
     end
 }
