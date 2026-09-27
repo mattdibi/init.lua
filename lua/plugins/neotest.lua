@@ -18,6 +18,7 @@ return {
                 adapters = {
                     require("neotest-java")({
                         -- Optional configuration here
+                        jvm_args = { "-Djunit.vintage.discovery.issue.reporting.enabled=false" }
                     }),
                 },
                 -- References https://symbl.cc/en/unicode-table/#geometric-shapes
