@@ -21,6 +21,21 @@ return {
                     }),
                 },
             })
+
+            -- Keymaps
+            local keymap = vim.keymap.set
+            local opts = { noremap = true, silent = true }
+
+            -- Run nearest test
+            keymap("n", "<leader>tt", function() require("neotest").run.run() end, opts)
+            -- Run test file
+            keymap("n", "<leader>tf", function() require("neotest").run.run(vim.fn.expand("%")) end, opts)
+            -- Run all tests
+            keymap("n", "<leader>ta", function() require("neotest").run.run(vim.fn.getcwd()) end, opts)
+            -- Toggle test summary
+            keymap("n", "<leader>ts", function() require("neotest").summary.toggle() end, opts)
+            -- Show test output
+            keymap("n", "<leader>to", function() require("neotest").output_panel.toggle() end, opts)
         end,
     },
 }
