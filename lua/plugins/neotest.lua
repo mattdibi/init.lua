@@ -33,7 +33,7 @@ return {
                     final_child_prefix = "╰",
                     non_collapsible = "─",
                     notify = "!",
-                    failed = "▶",
+                    failed = "✖",
                     passed = "▶",
                     skipped = "▷",
                     running = "▶",
