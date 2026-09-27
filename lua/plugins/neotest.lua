@@ -20,6 +20,28 @@ return {
                         -- Optional configuration here
                     }),
                 },
+                -- References https://symbl.cc/en/unicode-table/#geometric-shapes
+                icons = {
+                    child_indent = "│",
+                    child_prefix = "├",
+                    collapsed = "─",
+                    file = "◯",
+                    dir = "●",
+                    expanded = "╮",
+                    final_child_indent = " ",
+                    final_child_prefix = "╰",
+                    non_collapsible = "─",
+                    notify = "!",
+                    failed = "▶",
+                    passed = "▶",
+                    skipped = "▷",
+                    running = "▶",
+                    namespace = "▷",
+                    test = "▷",
+                    running_animated = { "/", "|", "\\", "-", "/", "|", "\\", "-" },
+                    unknown = "?",
+                    watching = "0"
+                }
             })
 
             -- Keymaps
