@@ -34,7 +34,7 @@ return {
                     non_collapsible = "─",
                     notify = "!",
                     failed = "✖",
-                    passed = "▶",
+                    passed = "✔",
                     skipped = "▷",
                     running = "▶",
                     namespace = "▷",
