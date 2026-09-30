@@ -41,7 +41,7 @@ return {
                     test = "▷",
                     running_animated = { "/", "|", "\\", "-", "/", "|", "\\", "-" },
                     unknown = "?",
-                    watching = "0"
+                    watching = "◕",
                 }
             })
 
