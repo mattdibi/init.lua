@@ -10,7 +10,7 @@ return {
                 ["g?"] = { "actions.show_help", mode = "n" },
                 ["<CR>"] = "actions.select",
                 ["<C-v>"] = { "actions.select", opts = { vertical = true } },
-                ["<C-h>"] = { "actions.select", opts = { horizontal = true } },
+                ["<C-s>"] = { "actions.select", opts = { horizontal = true } },
                 ["<C-t>"] = { "actions.select", opts = { tab = true } },
                 ["<C-c>"] = { "actions.close", mode = "n" },
                 ["-"] = { "actions.parent", mode = "n" },
