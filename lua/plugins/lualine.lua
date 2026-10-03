@@ -7,7 +7,7 @@ return {
                 theme = 'auto',
                 component_separators = { left = '|', right = '|'},
                 section_separators = '',
-                disabled_filetypes = {},
+                disabled_filetypes = { 'neotest-summary'},
                 always_divide_middle = true,
                 always_show_tabline = false,
                 globalstatus = false,
